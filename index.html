@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Body Composition Study Guide</title>
+<style>
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:system-ui,sans-serif;padding:16px;background:#fff;color:#1a1a1a;font-size:14px}
+  .tb{display:flex;gap:5px;margin-bottom:16px;flex-wrap:wrap}
+  .t{padding:6px 12px;border-radius:8px;border:1px solid #ddd;cursor:pointer;font-size:12px;background:#f5f5f5;color:#666;transition:all .15s}
+  .t.a{background:#fff;color:#111;border-color:#888;font-weight:500}
+  .sec{display:none}.sec.a{display:block}
+  .card{background:#fff;border:1px solid #e8e8e8;border-radius:12px;padding:16px 20px;margin-bottom:12px}
+  .lbl{font-size:11px;font-weight:500;letter-spacing:.04em;text-transform:uppercase;color:#888;margin-bottom:8px}
+  h3{font-size:15px;font-weight:500;margin-bottom:8px;color:#111}
+  p{font-size:14px;color:#555;line-height:1.6;margin-bottom:6px}
+  .row{display:flex;gap:10px;align-items:flex-start;padding:8px 0;border-bottom:1px solid #f0f0f0}
+  .row:last-child{border-bottom:none}
+  .rt{font-size:14px;color:#111;line-height:1.5}
+  .rs{font-size:12px;color:#666;margin-top:2px;line-height:1.4}
+  .sn{width:26px;height:26px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:500;flex-shrink:0}
+  .r{background:#FCEBEB;color:#A32D2D}.b{background:#E6F1FB;color:#185FA5}.g{background:#EAF3DE;color:#3B6D11}
+  .am{background:#FAEEDA;color:#854F0B}.tl{background:#E1F5EE;color:#0F6E56}.gr{background:#F1EFE8;color:#5F5E5A}
+  .pu{background:#EEEDFE;color:#3C3489}
+  .mn{border-left:3px solid #FAC775;background:#FAEEDA;border-radius:0 8px 8px 0;padding:9px 13px;margin:8px 0}
+  .mn-b{border-left-color:#378ADD;background:#E6F1FB}
+  .mn-g{border-left-color:#639922;background:#EAF3DE}
+  .mn-r{border-left-color:#E24B4A;background:#FCEBEB}
+  .mn-t{border-left-color:#1D9E75;background:#E1F5EE}
+  .mn-p{border-left-color:#534AB7;background:#EEEDFE}
+  .mw{font-size:13px;font-weight:500;color:#111}
+  .ms{font-size:12px;color:#555;margin-top:2px;line-height:1.5}
+  table{width:100%;border-collapse:collapse;font-size:13px}
+  th{text-align:left;font-weight:500;font-size:11px;color:#888;padding:6px 8px;border-bottom:1px solid #ddd;text-transform:uppercase;letter-spacing:.03em}
+  td{padding:8px;border-bottom:1px solid #f0f0f0;color:#111;vertical-align:top}
+  tr:last-child td{border-bottom:none}
+  .tdh{font-weight:500}
+  .two-col{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:8px}
+  .three-col{display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px;margin-top:8px}
+  .mini{background:#f8f8f8;border-radius:8px;padding:10px 12px}
+  .mt{font-size:11px;font-weight:500;color:#888;text-transform:uppercase;letter-spacing:.03em;margin-bottom:5px}
+  .mv{font-size:13px;color:#111;line-height:1.6}
+  .chain{display:flex;flex-direction:column}
+  .step{display:flex;align-items:flex-start;gap:12px;padding:10px 0;border-bottom:1px solid #f0f0f0}
+  .step:last-child{border-bottom:none}
+  .left{display:flex;flex-direction:column;align-items:center;gap:4px;flex-shrink:0}
+  .num{width:26px;height:26px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:500}
+  .arr{font-size:13px;color:#bbb;line-height:1}
+  .title{font-size:14px;font-weight:500;margin-bottom:3px;color:#111}
+  .sub{font-size:12px;color:#666;line-height:1.5}
+  .fat-table-f{background:#FBEAF0} .fat-table-m{background:#E6F1FB}
+  .badge{display:inline-block;font-size:11px;font-weight:500;padding:2px 8px;border-radius:10px;margin:2px}
+  .bd-r{background:#FCEBEB;color:#A32D2D}.bd-b{background:#E6F1FB;color:#185FA5}.bd-g{background:#EAF3DE;color:#3B6D11}
+  .bd-am{background:#FAEEDA;color:#854F0B}.bd-gr{background:#F1EFE8;color:#5F5E5A}.bd-p{background:#EEEDFE;color:#3C3489}
+  .disorder-card{border-radius:10px;padding:14px;margin-bottom:10px;border:1px solid}
+  .dc-pink{background:#FBEAF0;border-color:#F4C0D1}
+  .dc-blue{background:#E6F1FB;border-color:#85B7EB}
+  .dc-amber{background:#FAEEDA;border-color:#FAC775}
+  .dc-red{background:#FCEBEB;border-color:#F7C1C1}
+  .dc-purple{background:#EEEDFE;border-color:#CECBF6}
+  .dc-teal{background:#E1F5EE;border-color:#9FE1CB}
+  .dc-title{font-size:14px;font-weight:500;margin-bottom:6px;color:#111}
+  .dc-def{font-size:13px;color:#555;margin-bottom:8px;line-height:1.5}
+  .dc-items{display:flex;flex-direction:column;gap:4px}
+  .dc-item{font-size:12px;color:#333;display:flex;gap:6px;align-items:flex-start}
+  .dc-dot{width:6px;height:6px;border-radius:50%;flex-shrink:0;margin-top:4px}
+  .dot-pink{background:#D4537E}.dot-blue{background:#378ADD}.dot-amber{background:#BA7517}
+  .dot-red{background:#E24B4A}.dot-purple{background:#534AB7}.dot-teal{background:#1D9E75}
+  .qb{padding:8px 14px;border-radius:8px;border:1px solid #ddd;background:#f8f8f8;cursor:pointer;font-size:13px;color:#111;transition:all .15s;margin:4px 0;display:block;width:100%;text-align:left}
+  .qb:hover{background:#fff}
+  .qb.correct{background:#EAF3DE;border-color:#639922;color:#3B6D11}
+  .qb.wrong{background:#FCEBEB;border-color:#A32D2D;color:#A32D2D}
+  .qfb{font-size:13px;margin-top:8px;min-height:18px;color:#555;line-height:1.5}
+  .score-bar{height:6px;background:#e8e8e8;border-radius:3px;margin:8px 0}
+  .score-fill{height:100%;border-radius:3px;background:#639922;transition:width .4s}
+  .diet-bar{height:28px;border-radius:6px;display:flex;align-items:center;padding:0 10px;font-size:12px;font-weight:500;margin-bottom:6px}
+</style>
+</head>
+<body>
+
+<div class="tb">
+  <button class="t a" onclick="sw('fat')">1 · % Fat Classifications</button>
+  <button class="t" onclick="sw('dep')">2 · Fat Deposition</button>
+  <button class="t" onclick="sw('risks')">3 · Obesity Risks</button>
+  <button class="t" onclick="sw('acsm')">4 · ACSM Recommendations</button>
+  <button class="t" onclick="sw('diet')">5 · Healthy Diet</button>
+  <button class="t" onclick="sw('bad')">6 · Ineffective Methods</button>
+  <button class="t" onclick="sw('disorders')">7 · Body Image Disorders</button>
+  <button class="t" onclick="sw('quiz')">Quiz</button>
+</div>
+
+<!-- 1. % FAT CLASSIFICATIONS -->
+<div id="fat" class="sec a">
+  <div class="card">
+    <h3>Body fat classification — males vs females</h3>
+    <p>Females naturally carry more essential fat (~12%) due to sex-specific fat in breasts, pelvis, buttocks, and thighs — important for hormonal function and childbearing.</p>
+    <table style="margin-top:10px">
+      <tr>
+        <th>Classification</th>
+        <th style="color:#D4537E">Females (% fat)</th>
+        <th style="color:#185FA5">Males (% fat)</th>
+      </tr>
+      <tr><td class="tdh" style="color:#A32D2D">Essential fat</td><td class="fat-table-f">~12%</td><td class="fat-table-m">~3%</td></tr>
+      <tr><td class="tdh" style="color:#639922">Athletic</td><td class="fat-table-f">8–15%</td><td class="fat-table-m">5–10%</td></tr>
+      <tr><td class="tdh">Good</td><td class="fat-table-f">16–23%</td><td class="fat-table-m">11–14%</td></tr>
+      <tr><td class="tdh">Acceptable</td><td class="fat-table-f">24–30%</td><td class="fat-table-m">15–20%</td></tr>
+      <tr><td class="tdh" style="color:#854F0B">Overweight</td><td class="fat-table-f">30–35%</td><td class="fat-table-m">20–25%</td></tr>
+      <tr><td class="tdh" style="color:#E24B4A">Obese</td><td class="fat-table-f">&gt;35%</td><td class="fat-table-m">&gt;25%</td></tr>
+      <tr><td class="tdh" style="color:#A32D2D;font-weight:700">Morbidly obese</td><td class="fat-table-f">≥50%</td><td class="fat-table-m">≥50%</td></tr>
+    </table>
+  </div>
+  <div class="card">
+    <div class="lbl">Key definitions</div>
+    <div class="row"><div class="sn r">E</div><div><div class="rt">Essential fat — cannot lose this without compromising normal physiological function</div><div class="rs">Found in nerve tissues, bone marrow, organs, and all cellular membranes. Females have sex-specific fat (~5–9% extra) for breast tissue and hormonal (estrogen) production.</div></div></div>
+    <div class="row"><div class="sn am">S</div><div><div class="rt">Storage fat — the energy reserve; what increases/decreases with diet and exercise</div><div class="rs">~3,500 kcal per pound. Can be subcutaneous (under skin) or visceral (around organs).</div></div></div>
+    <div class="row"><div class="sn gr">≠</div><div><div class="rt">Overweight ≠ overfat</div><div class="rs">A muscular athlete may be "overweight" by BMI but have low body fat. Overfat = % fat exceeds healthy range regardless of total weight.</div></div></div>
+  </div>
+  <div class="mn"><div class="mw">Memory trick for female vs male essential fat: "Women need 12, Men need 3"</div><div class="ms">The 9% difference is sex-specific fat (breast ~4%, pelvis/buttocks/thigh) needed for estrogen production and childbearing. It is NOT optional.</div></div>
+</div>
+
+<!-- 2. FAT DEPOSITION -->
+<div id="dep" class="sec">
+  <div class="card">
+    <h3>Central vs peripheral fat deposition</h3>
+    <p>Where your body stores fat is genetically determined — you cannot choose through exercise ("spot reduction" is a myth).</p>
+    <div class="two-col" style="margin-top:10px">
+      <div class="mini">
+        <div class="mt" style="color:#A32D2D">Central (android) — "Apple"</div>
+        <div class="mv">Fat deposited around <strong>abdomen & thorax</strong><br><br>
+          <span class="badge bd-am">Subcutaneous (SAT)</span> below skin<br>
+          <span class="badge bd-r">Visceral (VAT)</span> around organs<br><br>
+          <span style="font-size:12px;color:#A32D2D">High VAT = ↑ risk of heart disease, Type II diabetes, cardiometabolic syndrome</span>
+        </div>
+      </div>
+      <div class="mini">
+        <div class="mt" style="color:#185FA5">Peripheral (gynoid) — "Pear"</div>
+        <div class="mv">Fat deposited around <strong>buttocks, hips & upper thighs</strong><br><br>
+          Mostly subcutaneous fat<br><br>
+          <span style="font-size:12px;color:#555">Lower health risk than central deposition — subcutaneous fat is less metabolically dangerous than visceral fat</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="lbl">Why visceral fat is more dangerous</div>
+    <div class="row"><div class="sn r">!</div><div><div class="rt">Visceral fat is metabolically active — releases inflammatory cytokines and free fatty acids directly into the portal circulation</div><div class="rs">This directly stresses the liver, disrupts insulin signaling, and promotes arterial inflammation → higher cardiometabolic risk</div></div></div>
+    <div class="row"><div class="sn am">!</div><div><div class="rt">Subcutaneous fat (peripheral) is less dangerous metabolically</div><div class="rs">It is still excess fat, but it doesn't dump inflammatory compounds directly into the liver via the portal vein</div></div></div>
+  </div>
+  <div class="card">
+    <div class="lbl">Spot reduction — why it doesn't work</div>
+    <div class="row"><div class="sn r">✗</div><div><div class="rt">You cannot target fat loss to a specific body part through exercise</div><div class="rs">Fat cell atrophy follows a genetically programmed sequential order — "last on, first off." The last place you gained fat will be the first place you lose it, regardless of which muscles you exercise.</div></div></div>
+  </div>
+  <div class="mn"><div class="mw">"Apple (central) = higher risk. Pear (peripheral) = lower risk."</div><div class="ms">Central fat may wrap around abdominal organs (visceral) — the dangerous kind. Peripheral fat stays mostly under skin (subcutaneous). You can't choose which shape you are — it's genetic.</div></div>
+</div>
+
+<!-- 3. OBESITY RISKS -->
+<div id="risks" class="sec">
+  <div class="card">
+    <h3>Health risks of morbid obesity (≥50% body fat)</h3>
+  </div>
+  <div class="card">
+    <div class="lbl">Cardiometabolic syndrome — a cluster of conditions</div>
+    <p>A combination of risk factors that dramatically increase the chance of heart disease, stroke, and diabetes. Central fat deposition (especially visceral) is a major driver.</p>
+    <div class="three-col" style="margin-top:8px">
+      <div class="mini"><div class="mt" style="color:#A32D2D">Cardiovascular</div><div class="mv" style="font-size:12px">Heart disease<br>Hypertension<br>Abnormal lipid profile<br>↑ LDL, ↓ HDL</div></div>
+      <div class="mini"><div class="mt" style="color:#E24B4A">Metabolic</div><div class="mv" style="font-size:12px">Type II diabetes<br>Insulin resistance<br>Metabolic syndrome</div></div>
+      <div class="mini"><div class="mt" style="color:#854F0B">Cancers</div><div class="mv" style="font-size:12px">Endometrial, uterine, breast, colon, gallbladder, kidney, esophagus, liver, pancreatic</div></div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="lbl">Additional health risks</div>
+    <div class="row"><div class="sn r">1</div><div><div class="rt">Sleep apnea</div><div class="rs">Excess tissue around airway obstructs breathing during sleep</div></div></div>
+    <div class="row"><div class="sn r">2</div><div><div class="rt">Osteoarthritis, joint disease, gout</div><div class="rs">Excess mechanical load on joints accelerates cartilage degradation</div></div></div>
+    <div class="row"><div class="sn r">3</div><div><div class="rt">Kidney & gallbladder disease</div></div></div>
+    <div class="row"><div class="sn r">4</div><div><div class="rt">Menstrual irregularities</div></div></div>
+    <div class="row"><div class="sn r">5</div><div><div class="rt">Adverse reactions to certain anesthetics</div></div></div>
+    <div class="row"><div class="sn r">6</div><div><div class="rt">Early onset dementia</div></div></div>
+    <div class="row"><div class="sn r">7</div><div><div class="rt">Psychological burden, social stigmatism, discrimination</div></div></div>
+  </div>
+  <div class="mn mn-r"><div class="mw">Cardiometabolic syndrome acronym: "HHODAM" — Heart disease, Hypertension, Obesity, Diabetes, Abnormal lipids, Metabolic dysfunction</div><div class="ms">The cluster of HTN + obesity + diabetes + abnormal lipids + excess abdominal fat = cardiometabolic syndrome. Central/visceral fat is the main driver because it releases inflammatory compounds directly into circulation.</div></div>
+</div>
+
+<!-- 4. ACSM RECOMMENDATIONS -->
+<div id="acsm" class="sec">
+  <div class="card">
+    <h3>ACSM fat loss recommendations — diet</h3>
+    <div class="row"><div class="sn am">kcal</div><div><div class="rt">Reduce energy intake to 1,000–2,500 kcal/day</div><div class="rs">Focus on nutrient-dense, calorie-poor foods. Avoid calorie-dense, nutrient-poor foods.</div></div></div>
+    <div class="row"><div class="sn am">lb</div><div><div class="rt">Goal: 1–4 lb of fat loss per week — safe and appropriate</div><div class="rs">First weeks may show greater mass loss due to water loss from glycogen depletion — not pure fat loss.</div></div></div>
+    <div class="row"><div class="sn am">↑</div><div><div class="rt">More weight lost initially = mostly water, not fat</div><div class="rs">Glycogen holds water; depleting glycogen early in a diet causes rapid but temporary weight loss.</div></div></div>
+  </div>
+  <div class="card">
+    <h3>ACSM fat loss recommendations — exercise</h3>
+    <table>
+      <tr><th>Variable</th><th>Recommendation</th></tr>
+      <tr><td class="tdh">Intensity</td><td>Light–moderate: 55–69% HRmax</td></tr>
+      <tr><td class="tdh">Duration</td><td>≥40–60 min/day; ≥250 min/week for significant fat loss</td></tr>
+      <tr><td class="tdh">Frequency</td><td>5–7 days/week</td></tr>
+      <tr><td class="tdh">Minimum for prevention</td><td>≥150 min/week to prevent fat gain</td></tr>
+      <tr><td class="tdh">Resistance training</td><td>2–3×/week — maintains/increases lean body mass → ↑ resting metabolic rate</td></tr>
+      <tr><td class="tdh">Bouts</td><td>Several intermittent bouts of 10–15 min/day acceptable</td></tr>
+    </table>
+    <div class="mn" style="margin-top:10px"><div class="mw">Key formula: Energy stored = Energy input − Energy output</div><div class="ms">1 lb of storage fat ≈ 3,500 kcal. To lose 1 lb/week → create a 500 kcal/day deficit. Walking/jogging 1 mile burns ~100 kcal. Total calories burned matters more than the intensity or fuel source.</div></div>
+  </div>
+  <div class="card">
+    <div class="lbl">Why resistance training matters for fat loss</div>
+    <div class="row"><div class="sn g">↑</div><div><div class="rt">Resistance training ↑ lean body mass → ↑ basal metabolic rate (BMR)</div><div class="rs">More muscle = more calories burned at rest doing everything — including sleeping. This compounds over time.</div></div></div>
+    <div class="row"><div class="sn g">↑</div><div><div class="rt">Ideal: combine aerobic + resistance training</div><div class="rs">Aerobic burns more calories per session; resistance builds the metabolic engine that burns more calories all day.</div></div></div>
+  </div>
+  <div class="mn mn-g"><div class="mw">ACSM exercise summary: "250 min/week for fat loss, 150 min/week for maintenance"</div><div class="ms">Light–moderate intensity (55–69% HRmax), 5–7 days/week. Add resistance training 2–3×/week to protect lean mass and boost BMR.</div></div>
+</div>
+
+<!-- 5. HEALTHY DIET -->
+<div id="diet" class="sec">
+  <div class="card">
+    <h3>Components of a healthy diet (USDA Dietary Reference Intake)</h3>
+    <p>Nutrient-dense, calorie-poor. High complex carbs, low fat — especially low saturated and trans fat.</p>
+    <div style="margin-top:12px">
+      <div class="diet-bar" style="background:#EAF3DE;color:#27500A;width:65%">Carbohydrates — 45–65%</div>
+      <p style="font-size:12px;color:#555;margin-bottom:10px;margin-left:4px">Mostly fruits, vegetables, whole grains. Avoid simple sugars and refined CHO.</p>
+      <div class="diet-bar" style="background:#FAEEDA;color:#633806;width:30%">Fat — 20–35%</div>
+      <p style="font-size:12px;color:#555;margin-bottom:10px;margin-left:4px">Mostly unsaturated. Very little saturated (mostly animal products) or trans fat.</p>
+      <div class="diet-bar" style="background:#E6F1FB;color:#0C447C;width:22%">Protein — 10–35%</div>
+      <p style="font-size:12px;color:#555;margin-bottom:10px;margin-left:4px">Lean sources preferred. ≤1.6 g/kg/day for strength gains.</p>
+    </div>
+  </div>
+  <div class="card">
+    <div class="lbl">Ultraprocessed foods (UPF) — avoid</div>
+    <div class="row"><div class="sn r">~</div><div><div class="rt">~60% of the typical US diet comes from ultraprocessed foods</div><div class="rs">~70% of packaged foods in US are considered UPF. Most fast food, breakfast cereals, snack bars, frozen meals, packaged sweets.</div></div></div>
+    <div class="row"><div class="sn r">!</div><div><div class="rt">UPF contain: high-fructose corn syrup, hydrogenated oils, protein isolates, chemical additives, artificial flavors, sweeteners, emulsifiers, preservatives</div></div></div>
+    <div class="row"><div class="sn r">↑</div><div><div class="rt">UPF associated with: ↑ cardiometabolic syndrome, ↑ cognitive decline, ↑ depression & anxiety</div></div></div>
+  </div>
+  <div class="mn"><div class="mw">Healthy diet = "45-65-20-35-10-35" → CHO · Fat · Protein ranges</div><div class="ms">CHO 45–65% (complex, whole foods) · Fat 20–35% (mostly unsaturated) · Protein 10–35% (lean sources). Nutrient dense, calorie poor. Minimize UPF.</div></div>
+</div>
+
+<!-- 6. INEFFECTIVE METHODS -->
+<div id="bad" class="sec">
+  <div class="card">
+    <h3>Ineffective methods of fat loss</h3>
+  </div>
+  <div class="card">
+    <div class="lbl">Crash dieting</div>
+    <div class="chain">
+      <div class="step"><div class="left"><div class="num r">1</div></div><div><div class="title">Drastic caloric restriction → body detects starvation</div><div class="sub">Initial rapid weight loss is mostly water (from glycogen depletion) and some glucose — not fat</div></div></div>
+      <div class="step"><div class="left"><div class="num r">2</div><div class="arr">↓</div></div><div><div class="title">BMR drops — body enters "starvation mode"</div><div class="sub">The body adapts by burning fewer calories to preserve itself. Less fat is actually lost than expected.</div></div></div>
+      <div class="step"><div class="left"><div class="num r">3</div><div class="arr">↓</div></div><div><div class="title">Yo-yo dieting: repeated crash dieting → BMR stuck in starvation mode</div><div class="sub">Body chronically adjusts downward → progressively harder to lose fat with each cycle</div></div></div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="lbl">High protein / low carb diets (Atkins, Zone)</div>
+    <div class="row"><div class="sn r">✗</div><div><div class="rt">Nutrient poor — not an ideal long-term diet</div></div></div>
+    <div class="row"><div class="sn r">✗</div><div><div class="rt">Starves cells of glucose → large water loss (from glycogen depletion) — not fat loss</div></div></div>
+    <div class="row"><div class="sn r">✗</div><div><div class="rt">Short-term weight loss is mostly water, not adipose tissue</div></div></div>
+    <div class="row"><div class="sn am">~</div><div><div class="rt">Protein is harder to digest → burns more kcal during digestion (thermic effect)</div><div class="rs">This is the one mechanism that works — but overall efficacy and long-term safety are controversial</div></div></div>
+  </div>
+  <div class="card">
+    <div class="lbl">Rubber/plastic/sauna suits</div>
+    <div class="row"><div class="sn r">✗</div><div><div class="rt">Large body mass loss on each use — but almost zero fat loss</div><div class="rs">Weight lost is almost entirely water (sweating). It returns completely once properly rehydrated. No actual adipose tissue is lost.</div></div></div>
+  </div>
+  <div class="card">
+    <div class="lbl">Spot reduction</div>
+    <div class="row"><div class="sn r">✗</div><div><div class="rt">You cannot target fat loss to a specific area by exercising that body part</div><div class="rs">Fat cell atrophy follows a genetically programmed sequential order. "Last on, first off." Doing crunches does not burn abdominal fat preferentially.</div></div></div>
+  </div>
+  <div class="card">
+    <div class="lbl">Fad diets</div>
+    <div class="row"><div class="sn r">✗</div><div><div class="rt">If a diet works over a long period of time — it is not a fad</div><div class="rs">Most fad diets produce short-term weight loss through water and glycogen depletion, not sustained fat reduction.</div></div></div>
+  </div>
+  <div class="mn mn-r"><div class="mw">Ineffective methods all share one thing: they don't create a sustainable caloric deficit from actual fat</div><div class="ms">Crash diets → water loss + starvation mode. Rubber suits → pure water loss. Spot reduction → myth. High protein → mostly water. Real fat loss requires a sustained caloric deficit over time.</div></div>
+</div>
+
+<!-- 7. BODY IMAGE DISORDERS -->
+<div id="disorders" class="sec">
+
+  <div class="disorder-card dc-pink">
+    <div class="dc-title">Anorexia nervosa</div>
+    <div class="dc-def">Self-imposed starvation in an effort to lose weight and achieve thinness. Characterized by serious weight loss, refusal to eat, and a distorted perception of one's body weight/shape.</div>
+    <div class="dc-items">
+      <div class="dc-item"><div class="dc-dot dot-pink"></div>Severe caloric restriction → body breaks down lean mass and fat</div>
+      <div class="dc-item"><div class="dc-dot dot-pink"></div>Electrolyte imbalances → cardiac arrhythmias, organ failure</div>
+      <div class="dc-item"><div class="dc-dot dot-pink"></div>Highest mortality rate of any psychiatric disorder</div>
+    </div>
+  </div>
+
+  <div class="disorder-card dc-amber">
+    <div class="dc-title">Bulimia nervosa</div>
+    <div class="dc-def">Recurrent binge eating (consuming far more than normal in one sitting) followed by purging via self-induced vomiting, intense exercise, laxatives, or diuretics. Self-evaluation is unduly influenced by body shape and weight.</div>
+    <div class="dc-items">
+      <div class="dc-item"><div class="dc-dot dot-amber"></div>Erosion of tooth enamel from repeated vomiting (stomach acid)</div>
+      <div class="dc-item"><div class="dc-dot dot-amber"></div>Electrolyte imbalances → cardiac arrhythmias</div>
+      <div class="dc-item"><div class="dc-dot dot-amber"></div>Esophageal damage, GI complications</div>
+      <div class="dc-item"><div class="dc-dot dot-amber"></div>Psychological consequences: shame, secrecy, depression</div>
+    </div>
+  </div>
+
+  <div class="disorder-card dc-teal">
+    <div class="dc-title">Female athlete triad</div>
+    <div class="dc-def">Three interrelated disorders common in female athletes in body-image sports (gymnastics, dance, figure skating, distance running, wrestling weight classes).</div>
+    <div class="dc-items">
+      <div class="dc-item"><div class="dc-dot dot-teal"></div><strong>1. Disordered eating</strong> → low energy availability, low calcium → body fat drops below essential (~12%)</div>
+      <div class="dc-item"><div class="dc-dot dot-teal"></div><strong>2. Menstrual dysfunction / amenorrhea</strong> → estrogen drops when body fat is too low</div>
+      <div class="dc-item"><div class="dc-dot dot-teal"></div><strong>3. Bone mineral loss</strong> → low calcium + low estrogen → premature osteoporosis, stress fractures</div>
+    </div>
+  </div>
+
+  <div class="disorder-card dc-blue">
+    <div class="dc-title">Male athlete triad</div>
+    <div class="dc-def">Three interrelated health problems in male athletes, particularly in weight-class and endurance sports.</div>
+    <div class="dc-items">
+      <div class="dc-item"><div class="dc-dot dot-blue"></div><strong>1. Energy deficiency</strong> ("under-fueling") — chronic caloric restriction relative to training demands</div>
+      <div class="dc-item"><div class="dc-dot dot-blue"></div><strong>2. Reproductive suppression</strong> — low testosterone, oligospermia (low sperm count), reduced libido</div>
+      <div class="dc-item"><div class="dc-dot dot-blue"></div><strong>3. Poor bone health</strong> — stress fractures, reduced bone mineral density</div>
+    </div>
+  </div>
+
+  <div class="disorder-card dc-purple">
+    <div class="dc-title">Muscle dysmorphia</div>
+    <div class="dc-def">An altered self-image where someone believes their muscles are small and weak even though they are objectively large and strong. Often called "reverse anorexia."</div>
+    <div class="dc-items">
+      <div class="dc-item"><div class="dc-dot dot-purple"></div>Compulsive resistance training, excessive protein intake</div>
+      <div class="dc-item"><div class="dc-dot dot-purple"></div>Use of anabolic steroids and other ergogenic substances</div>
+      <div class="dc-item"><div class="dc-dot dot-purple"></div>Social isolation, anxiety, and depression related to missed workouts</div>
+      <div class="dc-item"><div class="dc-dot dot-purple"></div>Physical health risks from steroid use: liver damage, cardiovascular issues, hormonal disruption</div>
+    </div>
+  </div>
+
+  <div class="disorder-card dc-red">
+    <div class="dc-title">Weight cutting (rapid weight loss for competition)</div>
+    <div class="dc-def">Practice of rapidly losing body mass over hours to days, common in weight-class sports (wrestling, MMA, boxing, judo, taekwondo). Three collegiate wrestlers died in 1998 within 2 months.</div>
+    <div class="dc-items">
+      <div class="dc-item"><div class="dc-dot dot-red"></div>Methods: food restriction (83%), water loading (73%), sauna/sweat suits (60–70%), increased training</div>
+      <div class="dc-item"><div class="dc-dot dot-red"></div>↓ Blood volume, ↓ electrolytes (Na⁺, K⁺) → cardiac arrhythmia risk</div>
+      <div class="dc-item"><div class="dc-dot dot-red"></div>↓ Stroke volume → ↑ HR, ↓ thermoregulation</div>
+      <div class="dc-item"><div class="dc-dot dot-red"></div>↓ Glycogen, ↓ testosterone, ↓ immune function, ↓ lean mass</div>
+      <div class="dc-item"><div class="dc-dot dot-red"></div>Performance: ↓ aerobic & muscular endurance, ↓ speed, ↓ coordination</div>
+      <div class="dc-item"><div class="dc-dot dot-red"></div>Neurological: impaired cognition, brain fog</div>
+    </div>
+  </div>
+
+  <div class="mn"><div class="mw">Triads: both female and male athlete triads start with energy deficiency → hormonal disruption → bone loss</div><div class="ms">Female triad: Disordered eating → Amenorrhea → Osteoporosis. Male triad: Under-fueling → Low testosterone/oligospermia → Poor bone health. Same root cause, different hormonal expressions.</div></div>
+  <div class="mn mn-p" style="margin-top:6px"><div class="mw">Muscle dysmorphia vs anorexia: both involve distorted body image — one sees fat that isn't there, the other sees small muscles that aren't there</div></div>
+</div>
+
+<!-- QUIZ -->
+<div id="quiz" class="sec">
+  <div id="qc"></div>
+</div>
+
+<script>
+function sw(id){
+  document.querySelectorAll('.sec').forEach(s=>s.classList.remove('a'));
+  document.querySelectorAll('.t').forEach(t=>t.classList.remove('a'));
+  document.getElementById(id).classList.add('a');
+  event.target.classList.add('a');
+}
+
+const qs=[
+  {q:"What is the essential fat percentage for females?",opts:["~3%","~8%","~12%","~20%"],c:2,fb:"✓ Females ~12% essential fat. Males ~3%. The extra ~9% in females is sex-specific fat (breast, pelvis, buttocks, thighs) needed for estrogen production and childbearing."},
+  {q:"At what % body fat is a male considered obese?",opts:[">20%",">25%",">30%",">35%"],c:1,fb:"✓ Males: >25% body fat = obese. Females: >35% = obese. Morbid obesity = ≥50% for both."},
+  {q:"What characterizes central (android) fat deposition?",opts:["Fat mostly in buttocks and thighs (pear shape)","Fat mostly around abdomen and thorax (apple shape) — may include visceral fat","Evenly distributed fat throughout the body","Fat primarily in the arms and shoulders"],c:1,fb:"✓ Central (android) = apple shape, fat around abdomen/thorax. May include visceral fat (VAT) around organs, which increases risk of heart disease and Type II diabetes."},
+  {q:"Which type of fat carries the higher cardiometabolic risk?",opts:["Subcutaneous adipose tissue (SAT)","Essential fat","Visceral adipose tissue (VAT)","Sex-specific fat"],c:2,fb:"✓ Visceral fat (VAT) — fat wrapped around abdominal organs — directly dumps inflammatory compounds and free fatty acids into portal circulation → higher risk of cardiometabolic syndrome."},
+  {q:"What is cardiometabolic syndrome?",opts:["A single disease caused by high blood pressure alone","A cluster of conditions (HTN, obesity, diabetes, abnormal lipids) that together ↑ risk of heart disease, stroke, cancer, and diabetes","A type of anemia caused by poor diet","A respiratory condition associated with obesity"],c:1,fb:"✓ Cardiometabolic syndrome = cluster of HTN + obesity + diabetes + abnormal lipid profile + excess abdominal fat. Central/visceral fat is the primary driver."},
+  {q:"Per ACSM, how many minutes per week of exercise is associated with SIGNIFICANT fat loss?",opts:[">150 min/wk","150–250 min/wk",">250 min/wk","Any amount is equally effective"],c:2,fb:"✓ >250 min/week is associated with clinically significant fat loss. 150–250 min/week improves fat loss with diet restriction. >150 min/week prevents fat gain."},
+  {q:"What are the macronutrient percentages of a healthy diet per USDA DRI?",opts:["CHO 20–30%, Fat 40–50%, Protein 20–30%","CHO 45–65%, Fat 20–35%, Protein 10–35%","CHO 60–75%, Fat 10–15%, Protein 15–25%","CHO 30–40%, Fat 30–40%, Protein 20–30%"],c:1,fb:"✓ CHO 45–65% (complex, whole foods), Fat 20–35% (mostly unsaturated), Protein 10–35% (lean sources). Nutrient dense, calorie poor."},
+  {q:"Why does crash dieting result in little actual fat loss?",opts:["It burns fat too quickly, causing ketosis to stop fat loss","The body drops its basal metabolic rate (starvation mode), so fewer calories are burned","It only affects water weight but not glycogen","It increases storage fat by triggering insulin release"],c:1,fb:"✓ Crash dieting → drastic caloric restriction → body detects starvation → BMR drops → body burns fewer calories to survive → little fat actually lost. Initial weight loss is mostly water from glycogen depletion."},
+  {q:"What is spot reduction?",opts:["A valid method of targeting fat loss in a specific body area through exercise","A myth — fat cell atrophy follows a genetically programmed sequential order regardless of which muscle is exercised","A surgical procedure to remove visceral fat","The process of losing fat from the periphery before the center"],c:1,fb:"✓ Spot reduction is a myth. Fat is lost in a genetically programmed order — 'last on, first off.' Doing crunches doesn't preferentially burn abdominal fat."},
+  {q:"What are the 3 components of the female athlete triad?",opts:["Low estrogen, high cortisol, and poor sleep","Disordered eating, menstrual dysfunction (amenorrhea), and bone mineral loss (premature osteoporosis)","Anemia, low body weight, and stress fractures","Overtraining, dehydration, and muscle dysmorphia"],c:1,fb:"✓ Female athlete triad: 1) Disordered eating → low energy/calcium 2) Amenorrhea (menstrual dysfunction) 3) Bone mineral loss / premature osteoporosis. Common in body-image and weight-class sports."},
+  {q:"How does the male athlete triad differ from the female athlete triad?",opts:["Males develop amenorrhea instead of low testosterone","Males experience energy deficiency, reproductive suppression (low testosterone, oligospermia), and poor bone health","Males only experience muscle loss without bone effects","The male triad involves only cardiovascular problems"],c:1,fb:"✓ Male triad: 1) Energy deficiency (under-fueling) 2) Reproductive suppression (low testosterone, oligospermia, low libido) 3) Poor bone health. Same root cause (energy deficiency) but different hormonal effects than females."},
+  {q:"What is muscle dysmorphia?",opts:["A condition where athletes have too much muscle mass","An altered self-image where someone believes their muscles are small and weak even though they are large and strong","A type of eating disorder involving excessive protein intake only","The medical term for steroid-induced muscle growth"],c:1,fb:"✓ Muscle dysmorphia = 'reverse anorexia.' Distorted body image where objectively muscular people see themselves as small/weak → compulsive training, steroid use, social isolation."},
+  {q:"What is the primary health danger of weight cutting in combat sports?",opts:["It permanently reduces VO2 peak","Dehydration → ↓ blood volume → electrolyte imbalances → cardiac arrhythmia risk, and widespread performance decrements","It causes permanent muscle loss","It only affects cognitive performance, not physical performance"],c:1,fb:"✓ Weight cutting causes dehydration → ↓ blood volume, ↓ electrolytes (Na⁺, K⁺) → cardiac arrhythmia risk. Also: ↓ SV, ↑ HR, ↓ thermoregulation, ↓ glycogen, ↓ immune function, ↓ performance across all fitness components."},
+  {q:"Why do rubber suits and sauna use fail as fat loss methods?",opts:["They cause hyperthermia which burns stored fat","Weight lost is almost entirely water — returned completely once rehydrated. No actual adipose tissue is lost.","They burn fat at the skin surface through heat","They work temporarily but cause rebound fat gain"],c:1,fb:"✓ Rubber/sauna suits = pure water weight loss via sweating. The scale drops, but no fat cells atrophy. Every pound returns when you rehydrate. Dangerous with no benefit for fat loss."},
+  {q:"What is the approximate caloric content of 1 pound of storage fat?",opts:["1,000 kcal","2,000 kcal","3,500 kcal","5,000 kcal"],c:2,fb:"✓ 1 pound of storage fat ≈ 3,500 kcal. To lose 1 lb/week you need a 500 kcal/day deficit (500 × 7 = 3,500). Walking/jogging 1 mile burns ~100 kcal."},
+];
+
+let cur=0, sc=0, ans=false, deck=[];
+
+function shuffle(arr){
+  const a=[...arr];
+  for(let i=a.length-1;i>0;i--){
+    const j=Math.floor(Math.random()*(i+1));
+    [a[i],a[j]]=[a[j],a[i]];
+  }
+  return a;
+}
+
+function buildDeck(){
+  deck = shuffle(qs).map(q => {
+    const paired = q.opts.map((o,i)=>({text:o, correct:i===q.c}));
+    const shuffled = shuffle(paired);
+    const newCorrect = shuffled.findIndex(o=>o.correct);
+    return { q: q.q, opts: shuffled.map(o=>o.text), c: newCorrect, fb: q.fb };
+  });
+}
+
+function rq(){
+  const q=deck[cur];
+  const pct=Math.round((sc/deck.length)*100);
+  document.getElementById('qc').innerHTML=`
+    <div class="card">
+      <div class="lbl" style="display:flex;justify-content:space-between">
+        <span>Question ${cur+1} of ${deck.length}</span><span>Score: ${sc}/${deck.length}</span>
+      </div>
+      <div class="score-bar"><div class="score-fill" style="width:${pct}%"></div></div>
+      <h3 style="margin-top:10px;margin-bottom:14px">${q.q}</h3>
+      <div id="opts">${q.opts.map((o,i)=>`<button class="qb" onclick="aq(${i})">${o}</button>`).join('')}</div>
+      <div class="qfb" id="fb"></div>
+    </div>
+    <div style="display:flex;justify-content:flex-end;margin-top:6px">
+      <button class="qb" id="nb" style="display:none;width:auto" onclick="nq()">Next →</button>
+    </div>`;
+}
+
+function aq(i){
+  if(ans)return; ans=true;
+  const q=deck[cur];
+  const btns=document.querySelectorAll('.qb');
+  btns[i].classList.add(i===q.c?'correct':'wrong');
+  if(i!==q.c) btns[q.c].classList.add('correct');
+  document.getElementById('fb').textContent=i===q.c?q.fb:'✗ Not quite. '+q.fb;
+  if(i===q.c) sc++;
+  const nb=document.getElementById('nb'); if(nb) nb.style.display='inline-block';
+}
+
+function nq(){
+  cur++; ans=false;
+  if(cur<deck.length){ rq(); }
+  else{
+    const pct=Math.round((sc/deck.length)*100);
+    const msg=sc===deck.length?"Perfect score!":sc>=12?"Excellent — nearly there.":sc>=9?"Solid work — review the ones you missed.":"Keep at it — revisit the tabs and try again.";
+    document.getElementById('qc').innerHTML=`
+      <div class="card" style="text-align:center;padding:2rem">
+        <h3 style="margin-bottom:8px">Done!</h3>
+        <p style="font-size:22px;font-weight:500;color:#111;margin-bottom:6px">${sc} / ${deck.length}</p>
+        <p style="font-size:14px;color:#888;margin-bottom:16px">${pct}% — ${msg}</p>
+        <div class="score-bar" style="max-width:200px;margin:0 auto 16px"><div class="score-fill" style="width:${pct}%"></div></div>
+        <button class="qb" style="width:auto;display:inline-block" onclick="restart()">Restart quiz</button>
+      </div>`;
+  }
+}
+
+function restart(){ cur=0; sc=0; ans=false; buildDeck(); rq(); }
+buildDeck(); rq();
+</script>
+</body>
+</html>
