@@ -86,7 +86,8 @@
   <button class="t" onclick="sw('acsm')">4 · ACSM Recommendations</button>
   <button class="t" onclick="sw('diet')">5 · Healthy Diet</button>
   <button class="t" onclick="sw('bad')">6 · Ineffective Methods</button>
-  <button class="t" onclick="sw('disorders')">7 · Body Image Disorders</button>
+  <button class="t" onclick="sw('formula')">7 · Fat Loss Formula</button>
+  <button class="t" onclick="sw('disorders')">8 · Body Image Disorders</button>
   <button class="t" onclick="sw('quiz')">Quiz</button>
 </div>
 
@@ -340,73 +341,63 @@
   <div class="mn mn-p" style="margin-top:6px"><div class="mw">Muscle dysmorphia vs anorexia: both involve distorted body image — one sees fat that isn't there, the other sees small muscles that aren't there</div></div>
 </div>
 
-<!-- 8. FAT LOSS FORMULA TAB -->
+<!-- FAT LOSS FORMULA TAB -->
 <div id="formula" class="sec">
   <div class="card">
     <h3>The fat loss formula — Energy Stored = Energy Input ± Energy Output</h3>
     <p>All excess caloric intake — whether from carbohydrate, fat, OR protein — is stored in adipose tissue as storage fat. Fat loss requires consistently burning more calories than you consume.</p>
-    <div style="background:#f8f8f8;border-radius:8px;padding:10px 14px;font-family:monospace;font-size:13px;border:1px solid #e8e8e8;margin:10px 0;line-height:2">
+    <div style="background:#f8f8f8;border-radius:8px;padding:10px 14px;font-family:monospace;font-size:13px;border:1px solid #e8e8e8;margin:10px 0;line-height:2.2">
       Eat 3,000 kcal, burn 2,000 kcal → <strong>1,000 kcal stored as fat</strong><br>
       Eat 2,000 kcal, burn 3,000 kcal → <strong>1,000 kcal removed from adipose tissue</strong>
     </div>
   </div>
-
   <div class="card">
-    <div class="lbl">Factor 1 — Caloric value of storage fat</div>
-    <div class="row"><div class="sn am">~</div><div><div class="rt">1 lb of storage fat ≈ 3,500 kcal</div><div class="rs">This is the commonly cited figure. It assumes the energy density of pure fat (triglycerides). 96% of adipose tissue is made up of triglycerides.</div></div></div>
-    <div class="row"><div class="sn r">!</div><div><div class="rt">BUT adipose tissue is NOT 100% pure fat</div><div class="rs">Adipose tissue composition: ~83% pure fat · ~15% water · ~2% protein. Therefore the true caloric equivalent of 1 lb of actual adipose tissue = 3,500 × 0.83 ≈ <strong>2,995 kcal</strong>.</div></div></div>
-    <div style="background:#FAEEDA;border-left:3px solid #FAC775;border-radius:0 8px 8px 0;padding:9px 13px;margin-top:8px">
-      <div style="font-size:13px;font-weight:500;color:#111">3,500 kcal = pure fat. 2,995 kcal = real adipose tissue (83% fat + 15% water + 2% protein)</div>
-      <div style="font-size:12px;color:#555;margin-top:2px">The 2,995 figure is more biologically accurate for fat loss predictions in the real world.</div>
-    </div>
+    <div class="lbl">Factor 1 — Caloric value of storage fat: 3,500 vs 2,995 kcal</div>
+    <div class="row"><div class="sn am">~</div><div><div class="rt">1 lb of storage fat ≈ 3,500 kcal (commonly cited)</div><div class="rs">This assumes the energy density of 100% pure fat (triglycerides). 96% of adipose tissue is made up of triglycerides as the main storage energy molecule.</div></div></div>
+    <div class="row"><div class="sn r">!</div><div><div class="rt">Adipose tissue is NOT 100% pure fat — it's ~83% fat, ~15% water, ~2% protein</div><div class="rs">Therefore the true caloric equivalent of losing 1 lb of actual adipose tissue = 3,500 × 0.83 ≈ <strong>2,995 kcal</strong>. This is the biologically accurate figure for real-world fat loss predictions.</div></div></div>
+    <div class="mn"><div class="mw">3,500 kcal = pure fat assumption · 2,995 kcal = real adipose tissue (83% fat + 15% H₂O + 2% protein)</div></div>
   </div>
-
   <div class="card">
-    <div class="lbl">Factor 2 — Fat cell behavior</div>
-    <div class="row"><div class="sn g">↑</div><div><div class="rt">Fat gain = fat cell HYPERTROPHY (cells get bigger)</div><div class="rs">Storage adipose cells expand as triglycerides accumulate inside them</div></div></div>
-    <div class="row"><div class="sn g">↓</div><div><div class="rt">Fat loss = fat cell ATROPHY (cells shrink)</div><div class="rs">Triglycerides are mobilized out of cells → cells shrink. The cells themselves do NOT disappear.</div></div></div>
-    <div class="row"><div class="sn r">✗</div><div><div class="rt">No evidence of fat cell hyperplasia (new fat cells) in adults</div><div class="rs">Some hypothesize it may occur during infancy, puberty, and pregnancy — but not in general adult life.</div></div></div>
+    <div class="lbl">Factor 2 — Fat cell behavior: atrophy vs hypertrophy</div>
+    <div class="row"><div class="sn r">↑</div><div><div class="rt">Fat GAIN = fat cell hypertrophy — cells expand as triglycerides accumulate inside them</div></div></div>
+    <div class="row"><div class="sn g">↓</div><div><div class="rt">Fat LOSS = fat cell atrophy — triglycerides are mobilized out, cells shrink</div><div class="rs">The cells themselves do NOT disappear — they shrink and remain, ready to expand again.</div></div></div>
+    <div class="row"><div class="sn r">✗</div><div><div class="rt">No evidence of fat cell hyperplasia (new fat cells forming) in adults</div><div class="rs">Some hypothesize it may occur during infancy, puberty, and pregnancy — but not in general adult life.</div></div></div>
   </div>
-
   <div class="card">
     <div class="lbl">Factor 3 — Exercise caloric expenditure</div>
-    <div class="row"><div class="sn b">~</div><div><div class="rt">Walking OR jogging 1 mile ≈ 100 kcal</div><div class="rs">Moving your body mass 1 mile requires roughly the same total work regardless of pace. Running gets there faster but burns the same kcal per mile as walking.</div></div></div>
-    <div class="row"><div class="sn b">5lb</div><div><div class="rt">To lose 5 lbs of fat through exercise alone = ~175 miles</div><div class="rs">5 lbs × 3,500 kcal ÷ 100 kcal/mile = 175 miles. At 5 miles/day = 35 days. This illustrates why diet + exercise together is far more practical than exercise alone.</div></div></div>
+    <div class="row"><div class="sn b">~</div><div><div class="rt">Walking OR jogging 1 mile ≈ 100 kcal regardless of pace</div><div class="rs">Moving your body mass 1 mile requires roughly the same total mechanical work regardless of speed. Running gets there faster but burns the same kcal per mile as walking.</div></div></div>
+    <div class="row"><div class="sn b">5lb</div><div><div class="rt">To lose 5 lbs of fat through exercise alone = ~175 miles of walking/jogging</div><div class="rs">5 lbs × 3,500 kcal ÷ 100 kcal/mile = 175 miles. At 5 miles/day = 35 days. This shows why diet + exercise combined is far more practical than exercise alone.</div></div></div>
   </div>
-
   <div class="card">
-    <div class="lbl">Factor 4 — Fuel selection during exercise does NOT determine fat loss</div>
-    <div class="row"><div class="sn r">✗</div><div><div class="rt">The "fat burning zone" myth — low intensity exercise does NOT produce more total fat loss than high intensity</div><div class="rs">Low intensity burns a HIGHER % of fat per minute, but you burn fewer total kcal. High intensity burns more kcal/min but uses mostly CHO. TOTAL caloric deficit over time is what determines fat loss — not which fuel was burned during the workout.</div></div></div>
-    <div class="row"><div class="sn g">✓</div><div><div class="rt">Low intensity advantage: can be performed longer → possibly more total kcal per session</div><div class="rs">Especially useful for beginners, older adults, or those with orthopedic problems</div></div></div>
+    <div class="lbl">Factor 4 — Fuel selection does NOT determine fat loss</div>
+    <div class="row"><div class="sn r">✗</div><div><div class="rt">"Fat burning zone" is a myth — low intensity does NOT produce more total fat loss than high intensity</div><div class="rs">Low intensity burns a higher % of fat per minute but fewer total kcal. High intensity burns more kcal/min but uses mostly CHO. Total caloric deficit over time is what determines fat loss — not which fuel was burned during the workout.</div></div></div>
+    <div class="row"><div class="sn g">✓</div><div><div class="rt">Low intensity advantage: can be sustained longer → possibly more total kcal per session</div><div class="rs">Especially useful for beginners, older adults, or those with orthopedic limitations</div></div></div>
     <div class="row"><div class="sn g">✓</div><div><div class="rt">High intensity advantage: burns more kcal per minute → better for time-limited individuals</div></div></div>
   </div>
-
   <div class="card">
     <div class="lbl">Factor 5 — Aerobic vs resistance training for fat loss</div>
-    <div class="row"><div class="sn b">A</div><div><div class="rt">Aerobic training: typically burns more total kcal per session</div><div class="rs">More efficient for creating a caloric deficit during the workout itself</div></div></div>
-    <div class="row"><div class="sn b">R</div><div><div class="rt">Resistance training: increases lean body mass → raises basal metabolic rate (BMR)</div><div class="rs">More muscle = more calories burned at rest 24/7. Compounds over time. Protects lean mass during a caloric deficit.</div></div></div>
-    <div class="row"><div class="sn g">★</div><div><div class="rt">Ideal = both aerobic + resistance training combined</div><div class="rs">Aerobic burns more kcal per session. Resistance builds the metabolic engine that burns more kcal all day long.</div></div></div>
+    <div class="row"><div class="sn b">A</div><div><div class="rt">Aerobic training: burns more total kcal per session</div><div class="rs">More efficient for creating a caloric deficit during the workout itself</div></div></div>
+    <div class="row"><div class="sn b">R</div><div><div class="rt">Resistance training: increases lean body mass → raises BMR</div><div class="rs">More muscle = more calories burned at rest 24/7. Protects lean mass during a caloric deficit. Compounds over time.</div></div></div>
+    <div class="row"><div class="sn g">★</div><div><div class="rt">Ideal = aerobic + resistance training combined</div><div class="rs">Aerobic burns more kcal per session. Resistance builds the metabolic engine that burns more kcal all day long.</div></div></div>
   </div>
-
   <div class="card">
-    <div class="lbl">Factor 6 — Safe rate of fat loss</div>
-    <div class="row"><div class="sn am">↓</div><div><div class="rt">1–4 lbs of fat loss per week = safe and appropriate</div><div class="rs">Greater mass loss during the first few weeks is common but reflects water loss from glycogen depletion — not pure fat.</div></div></div>
-    <div class="row"><div class="sn am">H₂O</div><div><div class="rt">Why early weight loss looks bigger than it is</div><div class="rs">Glycogen holds ~3g of water per gram. Depleting glycogen stores early in a diet → rapid water weight loss → scale drops fast → gives false impression of fat loss rate.</div></div></div>
+    <div class="lbl">Factor 6 — Safe rate of fat loss & early water weight</div>
+    <div class="row"><div class="sn am">↓</div><div><div class="rt">1–4 lbs of fat loss per week = safe and appropriate (ACSM)</div></div></div>
+    <div class="row"><div class="sn am">H₂O</div><div><div class="rt">Early rapid weight loss is mostly water — not fat</div><div class="rs">Glycogen holds ~3g of water per gram. Depleting glycogen stores early in a diet causes rapid water weight loss → scale drops fast → creates a false impression of fat loss rate. Not actual adipose tissue atrophy.</div></div></div>
   </div>
-
-  <div style="border-left:3px solid #639922;background:#EAF3DE;border-radius:0 8px 8px 0;padding:10px 14px;margin-top:4px">
-    <div style="font-size:13px;font-weight:500;color:#111">Summary: the 6 factors</div>
-    <div style="font-size:12px;color:#555;margin-top:3px;line-height:1.8">
-      1. 3,500 kcal = 1 lb pure fat · 2,995 kcal = 1 lb real adipose tissue (83% fat)<br>
+  <div class="mn mn-g">
+    <div class="mw">6-factor summary</div>
+    <div class="ms">
+      1. 3,500 kcal = pure fat · 2,995 kcal = real adipose tissue (83% fat)<br>
       2. Fat cells shrink (atrophy) during fat loss — they don't disappear<br>
       3. Walking/jogging 1 mile ≈ 100 kcal regardless of pace<br>
       4. Fuel selection (fat vs CHO) doesn't determine fat loss — total caloric deficit does<br>
       5. Aerobic burns more kcal/session · Resistance raises BMR long-term<br>
-      6. 1–4 lbs/week safe · Early rapid loss = water, not fat
+      6. 1–4 lbs/week safe · Early rapid loss = water from glycogen depletion, not fat
     </div>
   </div>
 </div>
- 
+
 <!-- QUIZ -->
 <div id="quiz" class="sec">
   <div id="qc"></div>
@@ -420,28 +411,78 @@ function sw(id){
   event.target.classList.add('a');
 }
 
-const qs=[
-  {q:"What is the essential fat percentage for females?",opts:["~3%","~8%","~12%","~20%"],c:2,fb:"✓ Females ~12% essential fat. Males ~3%. The extra ~9% in females is sex-specific fat (breast, pelvis, buttocks, thighs) needed for estrogen production and childbearing."},
-  {q:"At what % body fat is a male considered obese?",opts:[">20%",">25%",">30%",">35%"],c:1,fb:"✓ Males: >25% body fat = obese. Females: >35% = obese. Morbid obesity = ≥50% for both."},
-  {q:"What characterizes central (android) fat deposition?",opts:["Fat mostly in buttocks and thighs (pear shape)","Fat mostly around abdomen and thorax (apple shape) — may include visceral fat","Evenly distributed fat throughout the body","Fat primarily in the arms and shoulders"],c:1,fb:"✓ Central (android) = apple shape, fat around abdomen/thorax. May include visceral fat (VAT) around organs, which increases risk of heart disease and Type II diabetes."},
-  {q:"Which type of fat carries the higher cardiometabolic risk?",opts:["Subcutaneous adipose tissue (SAT)","Essential fat","Visceral adipose tissue (VAT)","Sex-specific fat"],c:2,fb:"✓ Visceral fat (VAT) — fat wrapped around abdominal organs — directly dumps inflammatory compounds and free fatty acids into portal circulation → higher risk of cardiometabolic syndrome."},
-  {q:"What is cardiometabolic syndrome?",opts:["A single disease caused by high blood pressure alone","A cluster of conditions (HTN, obesity, diabetes, abnormal lipids) that together ↑ risk of heart disease, stroke, cancer, and diabetes","A type of anemia caused by poor diet","A respiratory condition associated with obesity"],c:1,fb:"✓ Cardiometabolic syndrome = cluster of HTN + obesity + diabetes + abnormal lipid profile + excess abdominal fat. Central/visceral fat is the primary driver."},
-  {q:"Per ACSM, how many minutes per week of exercise is associated with SIGNIFICANT fat loss?",opts:[">150 min/wk","150–250 min/wk",">250 min/wk","Any amount is equally effective"],c:2,fb:"✓ >250 min/week is associated with clinically significant fat loss. 150–250 min/week improves fat loss with diet restriction. >150 min/week prevents fat gain."},
-  {q:"What are the macronutrient percentages of a healthy diet per USDA DRI?",opts:["CHO 20–30%, Fat 40–50%, Protein 20–30%","CHO 45–65%, Fat 20–35%, Protein 10–35%","CHO 60–75%, Fat 10–15%, Protein 15–25%","CHO 30–40%, Fat 30–40%, Protein 20–30%"],c:1,fb:"✓ CHO 45–65% (complex, whole foods), Fat 20–35% (mostly unsaturated), Protein 10–35% (lean sources). Nutrient dense, calorie poor."},
-  {q:"Why does crash dieting result in little actual fat loss?",opts:["It burns fat too quickly, causing ketosis to stop fat loss","The body drops its basal metabolic rate (starvation mode), so fewer calories are burned","It only affects water weight but not glycogen","It increases storage fat by triggering insulin release"],c:1,fb:"✓ Crash dieting → drastic caloric restriction → body detects starvation → BMR drops → body burns fewer calories to survive → little fat actually lost. Initial weight loss is mostly water from glycogen depletion."},
-  {q:"What is spot reduction?",opts:["A valid method of targeting fat loss in a specific body area through exercise","A myth — fat cell atrophy follows a genetically programmed sequential order regardless of which muscle is exercised","A surgical procedure to remove visceral fat","The process of losing fat from the periphery before the center"],c:1,fb:"✓ Spot reduction is a myth. Fat is lost in a genetically programmed order — 'last on, first off.' Doing crunches doesn't preferentially burn abdominal fat."},
-  {q:"What are the 3 components of the female athlete triad?",opts:["Low estrogen, high cortisol, and poor sleep","Disordered eating, menstrual dysfunction (amenorrhea), and bone mineral loss (premature osteoporosis)","Anemia, low body weight, and stress fractures","Overtraining, dehydration, and muscle dysmorphia"],c:1,fb:"✓ Female athlete triad: 1) Disordered eating → low energy/calcium 2) Amenorrhea (menstrual dysfunction) 3) Bone mineral loss / premature osteoporosis. Common in body-image and weight-class sports."},
-  {q:"How does the male athlete triad differ from the female athlete triad?",opts:["Males develop amenorrhea instead of low testosterone","Males experience energy deficiency, reproductive suppression (low testosterone, oligospermia), and poor bone health","Males only experience muscle loss without bone effects","The male triad involves only cardiovascular problems"],c:1,fb:"✓ Male triad: 1) Energy deficiency (under-fueling) 2) Reproductive suppression (low testosterone, oligospermia, low libido) 3) Poor bone health. Same root cause (energy deficiency) but different hormonal effects than females."},
-  {q:"What is muscle dysmorphia?",opts:["A condition where athletes have too much muscle mass","An altered self-image where someone believes their muscles are small and weak even though they are large and strong","A type of eating disorder involving excessive protein intake only","The medical term for steroid-induced muscle growth"],c:1,fb:"✓ Muscle dysmorphia = 'reverse anorexia.' Distorted body image where objectively muscular people see themselves as small/weak → compulsive training, steroid use, social isolation."},
-  {q:"What is the primary health danger of weight cutting in combat sports?",opts:["It permanently reduces VO2 peak","Dehydration → ↓ blood volume → electrolyte imbalances → cardiac arrhythmia risk, and widespread performance decrements","It causes permanent muscle loss","It only affects cognitive performance, not physical performance"],c:1,fb:"✓ Weight cutting causes dehydration → ↓ blood volume, ↓ electrolytes (Na⁺, K⁺) → cardiac arrhythmia risk. Also: ↓ SV, ↑ HR, ↓ thermoregulation, ↓ glycogen, ↓ immune function, ↓ performance across all fitness components."},
-  {q:"Why do rubber suits and sauna use fail as fat loss methods?",opts:["They cause hyperthermia which burns stored fat","Weight lost is almost entirely water — returned completely once rehydrated. No actual adipose tissue is lost.","They burn fat at the skin surface through heat","They work temporarily but cause rebound fat gain"],c:1,fb:"✓ Rubber/sauna suits = pure water weight loss via sweating. The scale drops, but no fat cells atrophy. Every pound returns when you rehydrate. Dangerous with no benefit for fat loss."},
-  {q:"What is the approximate caloric content of 1 pound of storage fat?",opts:["1,000 kcal","2,000 kcal","3,500 kcal","5,000 kcal"],c:2,fb:"✓ 1 pound of storage fat ≈ 3,500 kcal. To lose 1 lb/week you need a 500 kcal/day deficit (500 × 7 = 3,500). Walking/jogging 1 mile burns ~100 kcal."},
-{q:"Adipose tissue is ~83% pure fat, ~15% water, ~2% protein. What is the true caloric equivalent of losing 1 lb of actual adipose tissue?",opts:["3,500 kcal — the standard figure applies exactly","~2,995 kcal — because adipose tissue is not 100% pure fat, the real figure is 3,500 × 0.83","~1,750 kcal — fat tissue is only 50% triglycerides","~4,200 kcal — water content increases the caloric density"],c:1,fb:"✓ 2,995 kcal. Adipose tissue = ~83% pure fat + ~15% water + ~2% protein. 3,500 × 0.83 = ~2,995. The commonly cited 3,500 assumes 100% pure fat — 2,995 is the biologically accurate figure."},
-{q:"What does 'Energy Stored = Energy Input ± Energy Output' mean for fat loss?",opts:["Only dietary fat intake determines fat storage","Excess kcal from ANY macronutrient (CHO, fat, or protein) is stored as adipose tissue — fat loss requires burning MORE kcal than consumed","Only exercise-derived energy output reduces adipose tissue","Energy output must equal energy input to lose fat"],c:1,fb:"✓ Excess kcal from any source (CHO, fat, protein) is stored as fat. Eat 3,000, burn 2,000 → 1,000 kcal stored. Eat 2,000, burn 3,000 → 1,000 kcal removed from adipose tissue. Fat loss = sustained caloric deficit."},
-{q:"Why does walking and jogging 1 mile burn approximately the same kcal (~100)?",opts:["Both activities use the same muscles at the same intensity","Moving your body mass 1 mile requires roughly the same total mechanical work regardless of pace — speed affects how long it takes, not total kcal per mile","Running burns 3× more kcal per mile than walking","The 100 kcal figure only applies to people weighing exactly 70 kg"],c:1,fb:"✓ The total mechanical work of displacing your body mass 1 mile is roughly constant regardless of pace. Running gets you there faster but burns the same ~100 kcal per mile. To lose 5 lbs through exercise alone = ~175 miles (5 × 3,500 ÷ 100)."},
-{q:"Does the fuel used during exercise (fat vs. CHO) determine how much fat you lose?",opts:["Yes — exercising in the 'fat burning zone' at low intensity produces more fat loss","No — total caloric deficit over time is what determines fat loss. Whether fat or CHO fuels the workout does not significantly change total adipose tissue lost.","Yes — only exercise using fat as fuel directly reduces adipose tissue","Yes — high intensity exercise converts CHO directly into fat"],c:1,fb:"✓ Fuel selection does NOT determine fat loss — total caloric deficit does. Low intensity burns more fat % per minute but fewer total kcal. High intensity burns more kcal/min using CHO. Either creates a deficit — that's what reduces adipose tissue."},
-{q:"What actually happens to fat cells during fat loss?",opts:["They undergo hyperplasia — dividing into smaller daughter cells","They undergo apoptosis — dying and being permanently eliminated","They undergo atrophy — shrinking as stored triglycerides are mobilized out. No evidence of hyperplasia in adults.","They are converted into connective tissue"],c:2,fb:"✓ Fat loss = fat cell ATROPHY (shrinking). Triglycerides are mobilized out of cells, which shrink but do NOT disappear. No evidence of fat cell hyperplasia in adults (though hypothesized during infancy, puberty, and pregnancy)."},];
+const BANK=[
+  /* ── % FAT CLASSIFICATIONS ── */
+  {q:"What is the essential fat % for females?",opts:["~3%","~8%","~12%","~20%"],c:2,fb:"✓ Females ~12%. Males ~3%. The extra ~9% is sex-specific fat (breast, pelvis, buttocks, thighs) needed for estrogen production and childbearing."},
+  {q:"What is the essential fat % for males?",opts:["~1%","~3%","~8%","~12%"],c:1,fb:"✓ Males ~3%. Females ~12%. Male essential fat is found in nerve tissue, bone marrow, and organs. It cannot be lost without impairing physiological function."},
+  {q:"At what % body fat is a FEMALE considered obese?",opts:[">25%",">30%",">35%",">50%"],c:2,fb:"✓ Females >35% = obese. Males >25% = obese. Morbid obesity = ≥50% for both sexes."},
+  {q:"At what % body fat is a MALE considered obese?",opts:[">15%",">20%",">25%",">30%"],c:2,fb:"✓ Males >25% = obese. Females >35% = obese. Morbid obesity = ≥50% for both."},
+  {q:"Morbid obesity is defined as what % body fat for both sexes?",opts:["≥35%","≥40%","≥45%","≥50%"],c:3,fb:"✓ Morbid obesity = ≥50% body fat for both males and females."},
+  {q:"What % fat range is considered 'athletic' for females?",opts:["3–7%","8–15%","16–23%","24–30%"],c:1,fb:"✓ Athletic females: 8–15%. Athletic males: 5–10%. These are below the 'good' range but above essential fat."},
+  {q:"What % fat range is considered 'athletic' for males?",opts:["3–5%","5–10%","11–14%","15–20%"],c:1,fb:"✓ Athletic males: 5–10%. Athletic females: 8–15%."},
+  {q:"What % fat range is considered 'acceptable' for males?",opts:["5–10%","11–14%","15–20%","20–25%"],c:2,fb:"✓ Acceptable for males: 15–20%. Acceptable for females: 24–30%. 'Good' for males is 11–14%."},
+  {q:"Why do females naturally carry more essential fat than males?",opts:["Females have a slower metabolism requiring more stored energy","Sex-specific fat in breast, pelvis, buttocks, and thighs is needed for estrogen production and childbearing","Females have more bone marrow requiring more fat","Females have larger organs requiring more protective fat"],c:1,fb:"✓ Female sex-specific fat (~5–9% extra) is stored in breast (~4%), pelvis, buttocks, and thighs. It supports estrogen production and is critical for childbearing."},
+  {q:"What is the difference between 'overweight' and 'overfat'?",opts:["They mean exactly the same thing","Overweight = total body mass exceeds normal; overfat = % body fat exceeds healthy range. A muscular athlete can be overweight but not overfat.","Overweight applies only to BMI; overfat applies only to athletes","Overfat is a more severe condition than morbid obesity"],c:1,fb:"✓ Overweight = body mass > normal (BMI-based). Overfat = % fat > healthy range. A muscular athlete may be 'overweight' by BMI but have low body fat — they are overweight but NOT overfat."},
 
+  /* ── FAT DEPOSITION ── */
+  {q:"What shape is associated with central (android) fat deposition?",opts:["Pear shape","Hourglass shape","Apple shape","Rectangle shape"],c:2,fb:"✓ Central (android) = apple shape. Fat deposits around the abdomen and thorax. May include visceral fat around organs."},
+  {q:"What shape is associated with peripheral (gynoid) fat deposition?",opts:["Apple shape","Pear shape","Oval shape","Triangle shape"],c:1,fb:"✓ Peripheral (gynoid) = pear shape. Fat deposits mostly around buttocks, hips, and upper thighs — mostly subcutaneous."},
+  {q:"What is visceral adipose tissue (VAT)?",opts:["Fat stored just below the skin","Fat wrapped around abdominal organs","Fat stored in the thighs and buttocks","Essential fat in nerve and bone tissue"],c:1,fb:"✓ VAT = fat surrounding abdominal organs. It is metabolically dangerous because it releases inflammatory compounds and free fatty acids directly into portal circulation → ↑ cardiometabolic risk."},
+  {q:"Why is visceral fat more dangerous than subcutaneous fat?",opts:["It weighs more per unit volume","It releases inflammatory cytokines and free fatty acids directly into portal circulation, stressing the liver and promoting arterial inflammation","It is impossible to lose through exercise","It blocks oxygen delivery to muscles"],c:1,fb:"✓ Visceral fat is metabolically active and dumps inflammatory compounds directly into the liver via portal circulation → insulin resistance, arterial inflammation, cardiometabolic syndrome."},
+  {q:"Why does spot reduction not work?",opts:["Exercising a muscle burns fat globally, not locally","Fat cell atrophy follows a genetically programmed sequential order — 'last on, first off' — regardless of which muscles are exercised","The body burns muscle before fat during targeted exercise","Spot reduction works but only for subcutaneous fat"],c:1,fb:"✓ Spot reduction is a myth. Fat is lost in a genetically programmed order: the last place fat was deposited is the first place it's lost, regardless of which muscle you train."},
+  {q:"Where is fat stored in central deposition that poses the greatest health risk?",opts:["Subcutaneous fat under abdominal skin","Visceral fat surrounding the abdominal organs","Fat deposits in the thoracic wall","Fat stored around the kidneys only"],c:1,fb:"✓ Visceral fat (VAT) surrounding abdominal organs is the highest-risk fat. Central depositors may have high VAT even if they don't look extremely obese externally."},
+
+  /* ── OBESITY RISKS ── */
+  {q:"Cardiometabolic syndrome is best described as:",opts:["A single disease caused only by hypertension","A cluster of conditions — HTN, obesity, diabetes, abnormal lipids — that together greatly increase risk of heart disease, stroke, diabetes, and cancer","A respiratory condition caused by sleep apnea","A genetic disorder affecting metabolism"],c:1,fb:"✓ Cardiometabolic syndrome = cluster of HTN + obesity + diabetes + abnormal lipid profile + excess abdominal fat. Central/visceral fat is the primary driver."},
+  {q:"Which of the following is NOT a health risk associated with morbid obesity?",opts:["Sleep apnea","Type II diabetes","Increased bone density","Certain cancers (breast, colon, kidney)"],c:2,fb:"✓ Morbid obesity is associated with DECREASED bone density in some contexts, and certainly doesn't cause increased bone density. All other options are legitimate risks of morbid obesity."},
+  {q:"Which cancers are associated with morbid obesity?",opts:["Only lung and skin cancer","Endometrial, uterine, breast, colon, gallbladder, kidney, esophagus, liver, pancreatic","Only colon cancer","Brain and spinal tumors exclusively"],c:1,fb:"✓ Morbid obesity increases risk of at least 9 cancer types: endometrial, uterine, breast, colon, gallbladder, kidney, esophagus, liver, and pancreatic."},
+  {q:"What neurological risk is associated with morbid obesity?",opts:["Increased reaction time","Early onset dementia","Enhanced neuroplasticity","Reduced nerve conduction velocity only"],c:1,fb:"✓ Morbid obesity is associated with early onset dementia, in addition to psychological burden, social stigma, and discrimination."},
+  {q:"What joint conditions are associated with morbid obesity?",opts:["Increased joint flexibility","Osteoarthritis, joint disease, and gout","Reduced inflammation in cartilage","Faster tendon repair"],c:1,fb:"✓ Morbid obesity → osteoarthritis, joint disease, and gout. Excess mechanical load accelerates cartilage degradation and alters uric acid metabolism (gout)."},
+
+  /* ── ACSM RECOMMENDATIONS ── */
+  {q:"Per ACSM, what exercise duration per week is associated with SIGNIFICANT fat loss?",opts:[">100 min/wk","150–250 min/wk",">250 min/wk","Any duration works equally"],c:2,fb:"✓ >250 min/week = clinically significant fat loss. 150–250 min/week with diet restriction = moderate fat loss. >150 min/week = prevents fat gain."},
+  {q:"Per ACSM, what is the minimum exercise per week to PREVENT fat gain?",opts:["50 min/wk","100 min/wk","≥150 min/wk","200 min/wk"],c:2,fb:"✓ ≥150 min/week prevents fat gain. >250 min/week produces significant fat loss. ACSM recommends 5–7 days/week at 55–69% HRmax for fat loss programs."},
+  {q:"What exercise intensity does ACSM recommend for fat loss?",opts:["Very high intensity: 85–95% HRmax","Moderate: 55–69% HRmax","Low: 40–54% HRmax","Maximal: 95–100% HRmax"],c:1,fb:"✓ ACSM recommends 55–69% HRmax (light to moderate) for fat loss. Duration and total caloric expenditure matter more than high intensity for fat loss purposes."},
+  {q:"What is ACSM's recommended caloric intake range during a fat loss program?",opts:["500–1,000 kcal/day","1,000–2,500 kcal/day","2,500–3,000 kcal/day","Any restriction is acceptable"],c:1,fb:"✓ ACSM recommends reducing intake to 1,000–2,500 kcal/day, focused on nutrient-dense, calorie-poor foods."},
+  {q:"Why does ACSM include resistance training in fat loss recommendations?",opts:["Resistance training burns the most calories per session","Resistance training maintains/increases lean body mass, which raises resting metabolic rate","Resistance training directly oxidizes fat cells","Resistance training suppresses appetite more than aerobic exercise"],c:1,fb:"✓ Resistance training 2–3×/week protects lean body mass during fat loss and increases BMR — meaning more calories burned at rest 24/7, compounding fat loss over time."},
+  {q:"What is the safe and appropriate rate of fat loss per week per ACSM?",opts:["0.5–1 lb/week","1–4 lb/week","5–7 lb/week","10+ lb/week"],c:1,fb:"✓ 1–4 lb/week is safe and appropriate. Greater losses early in a program often reflect water loss from glycogen depletion — not pure fat."},
+  {q:"Why does total caloric expenditure matter more than exercise intensity for fat loss?",opts:["High intensity exercise always burns more total calories","Low intensity can be sustained longer, potentially burning more total calories per session. The total kcal deficit over time is what drives fat loss.","Intensity determines fuel type burned which determines fat loss","High intensity uniquely targets adipose tissue"],c:1,fb:"✓ Total calories burned vs. consumed determines fat loss. Low intensity allows longer duration (more total kcal burned). High intensity burns more kcal/min but can't be sustained as long. Both approaches work — total deficit is what matters."},
+
+  /* ── HEALTHY DIET ── */
+  {q:"Per USDA DRI, what percentage of a healthy diet should come from carbohydrates?",opts:["20–35%","35–45%","45–65%","65–80%"],c:2,fb:"✓ CHO: 45–65% of caloric intake, mostly from fruits, vegetables, and whole grains. Simple sugars and refined carbs should be minimized."},
+  {q:"Per USDA DRI, what percentage of a healthy diet should come from fat?",opts:["5–15%","20–35%","35–50%","50–60%"],c:1,fb:"✓ Fat: 20–35% of caloric intake, mostly unsaturated. Very little saturated (animal products) or trans fat."},
+  {q:"Per USDA DRI, what percentage of a healthy diet should come from protein?",opts:["5–10%","10–35%","35–50%","50–60%"],c:1,fb:"✓ Protein: 10–35% of caloric intake. For strength gains, ≤1.6 g/kg/day is the evidence-based recommendation."},
+  {q:"What makes ultraprocessed foods (UPF) harmful?",opts:["They contain too much protein","They contain high-fructose corn syrup, hydrogenated oils, chemical additives, and are associated with ↑ cardiometabolic syndrome, cognitive decline, and depression","They are too low in calories","They contain excessive vitamins and minerals"],c:1,fb:"✓ UPF = ~60% of the typical US diet. Contains HFCS, hydrogenated oils, protein isolates, artificial additives. Linked to ↑ cardiometabolic syndrome, ↑ cognitive decline, ↑ depression and anxiety."},
+  {q:"What type of carbohydrates should make up the majority of CHO intake in a healthy diet?",opts:["Simple sugars (candy, soda)","Refined grains (white bread, white rice)","Complex carbohydrates — fruits, vegetables, whole grains","High-fructose corn syrup products"],c:2,fb:"✓ Complex CHO from fruits, vegetables, and whole grains. These are nutrient-dense and calorie-poor vs. simple/refined carbs which are calorie-dense and nutrient-poor."},
+
+  /* ── INEFFECTIVE METHODS ── */
+  {q:"Why does crash dieting fail to produce significant fat loss?",opts:["It activates fat cell hyperplasia","The body drops its BMR (starvation mode) — fewer calories burned. Initial weight loss is mostly water from glycogen depletion.","It exclusively burns muscle instead of fat","Crash dieting actually works well short-term and long-term"],c:1,fb:"✓ Crash dieting → drastic restriction → starvation mode → BMR drops → less fat actually burned. Most early weight loss = water from glycogen depletion, not adipose tissue."},
+  {q:"What is yo-yo dieting and why is it harmful?",opts:["A diet that alternates between high fat and high carb days","Repeatedly cycling on and off diets — the body chronically adjusts BMR downward, making fat loss progressively harder","A safe method of cycling between maintenance and deficit calories","A diet plan that alternates aerobic and resistance training"],c:1,fb:"✓ Yo-yo dieting = repeated crash diet cycles → body chronically interprets starvation as normal → BMR gets progressively lower → harder to lose fat with each cycle."},
+  {q:"Why do high-protein, low-carb diets (like Atkins) fail as long-term fat loss strategies?",opts:["They cause fat gain through ketosis","They are nutrient-poor and initial weight loss is mostly water from glycogen depletion, not fat. Long-term efficacy and safety are controversial.","They work perfectly and are recommended by ACSM","They cause excessive fat burning that damages organs"],c:1,fb:"✓ High-protein/low-CHO diets: nutrient poor, initial loss is mostly water (glycogen depletion). Some benefit from protein's higher thermic effect, but long-term efficacy and safety remain controversial."},
+  {q:"What weight loss actually occurs with rubber suits and saunas?",opts:["Fat is burned at the skin surface from heat exposure","Almost entirely water weight — every pound returns once properly rehydrated. No adipose tissue is lost.","Muscle glycogen is burned, reducing total body mass permanently","Visceral fat is preferentially metabolized in high-heat environments"],c:1,fb:"✓ Rubber/sauna suits = 100% water weight loss via sweating. Scale drops dramatically, but returns completely with rehydration. No fat cells atrophy. Also dangerous due to dehydration risk."},
+  {q:"What is the 'last on, first off' principle of fat loss?",opts:["The most recently deposited fat is the first to be lost, regardless of where you exercise","Fat is always lost from the core before the extremities","You lose fat from the extremities before losing it from the core","Fat cells in more active muscles atrophy first"],c:0,fb:"✓ 'Last on, first off' — the final body region where fat was deposited is the first region where fat is removed during a deficit. This is genetically determined and cannot be overridden by targeted exercise (spot reduction is a myth)."},
+
+  /* ── BODY IMAGE DISORDERS ── */
+  {q:"How is anorexia nervosa defined?",opts:["Binge eating followed by purging behaviors","Self-imposed starvation in an effort to lose weight — marked by serious weight loss, refusal to eat, and distorted body image","Compulsive exercise combined with normal eating patterns","Excessive protein intake to increase muscle mass"],c:1,fb:"✓ Anorexia nervosa = self-imposed starvation. Characterized by serious weight loss, refusal to eat, and distorted perception of body weight/shape. Has the highest mortality rate of any psychiatric disorder."},
+  {q:"How is bulimia nervosa defined?",opts:["Refusing to eat in public but eating normally in private","Recurrent binge eating followed by purging (vomiting, laxatives, excessive exercise, diuretics)","Eating only low-calorie foods obsessively","Alternating between anorexia and normal eating"],c:1,fb:"✓ Bulimia = binge eating (consuming far more than normal) followed by purging (vomiting, laxatives, intense exercise, diuretics). Self-evaluation is unduly influenced by body shape and weight."},
+  {q:"What are the 3 components of the female athlete triad?",opts:["Low estrogen, high cortisol, and poor sleep","Disordered eating → amenorrhea → bone mineral loss (premature osteoporosis)","Anemia, low body weight, and stress fractures","Overtraining, dehydration, and muscle dysmorphia"],c:1,fb:"✓ Female triad: 1) Disordered eating → low energy/calcium → body fat below essential 2) Menstrual dysfunction/amenorrhea 3) Bone mineral loss → premature osteoporosis."},
+  {q:"What body fat level triggers menstrual dysfunction in the female athlete triad?",opts:["Below 20%","Below 16%","Below essential fat level (~12%)","Below 8%"],c:2,fb:"✓ When body fat drops below essential level (~12% for females), estrogen production is impaired → amenorrhea. This also signals the 2nd stage of the female athlete triad."},
+  {q:"What are the 3 components of the MALE athlete triad?",opts:["Low testosterone, high cortisol, and poor sleep","Energy deficiency, reproductive suppression (low testosterone, oligospermia), and poor bone health","Anemia, low body weight, and muscle loss","Overtraining, dehydration, and cardiac issues"],c:1,fb:"✓ Male triad: 1) Energy deficiency (under-fueling) 2) Reproductive suppression — low testosterone, oligospermia (low sperm count), reduced libido 3) Poor bone health."},
+  {q:"What is muscle dysmorphia?",opts:["A condition where athletes have genuinely underdeveloped muscles","An altered self-image where objectively large, strong people believe their muscles are small and weak — 'reverse anorexia'","A medical term for steroid-induced muscle damage","An eating disorder characterized by excessive protein consumption only"],c:1,fb:"✓ Muscle dysmorphia = 'reverse anorexia.' Objectively muscular people perceive themselves as small/weak → compulsive training, ergogenic substance use (steroids), social isolation, anxiety."},
+  {q:"What are the main physiological dangers of weight cutting?",opts:["It permanently reduces aerobic capacity","Dehydration → ↓ blood volume → ↓ electrolytes (Na⁺, K⁺) → cardiac arrhythmia risk; also ↓ SV, ↑ HR, ↓ thermoregulation, ↓ glycogen, ↓ immune function","It causes permanent muscle fiber damage","It only reduces cognitive performance with no physical effects"],c:1,fb:"✓ Weight cutting → dehydration → ↓ blood volume, ↓ Na⁺/K⁺ electrolytes → cardiac arrhythmia risk. Plus widespread decrements: ↓ SV, ↑ HR, ↓ thermoregulation, ↓ glycogen, ↓ testosterone, ↓ immune function."},
+  {q:"Three collegiate wrestlers died in 1998 due to which practice?",opts:["Anabolic steroid overdose","Rapid weight cutting using sauna suits, food restriction, and dehydration","Overtraining syndrome","Eating disorder complications"],c:1,fb:"✓ Three Division I wrestlers died within 2 months in 1998 from rapid weight cutting — a combination of food restriction, sweat suits, saunas, and dehydration. This highlights the lethal potential of extreme weight cutting."},
+  {q:"What distinguishes bulimia from anorexia?",opts:["Both involve starvation but anorexia is more severe","Bulimia involves binge-purge cycles; anorexia involves self-starvation. Both involve distorted body image but through different mechanisms.","Bulimia only affects athletes while anorexia affects the general population","They are the same condition with different names"],c:1,fb:"✓ Anorexia = self-starvation and refusal to eat. Bulimia = binge-purge cycles. Both involve distorted body image and dangerous health consequences, but through fundamentally different behavioral patterns."},
+  {q:"What type of fat is storage adipose tissue primarily composed of?",opts:["Protein and water in equal parts","~83% pure fat (triglycerides), ~15% water, ~2% protein","50% triglycerides and 50% free fatty acids","Primarily phospholipids"],c:1,fb:"✓ Storage adipose tissue: ~83% pure fat, ~15% water, ~2% protein. The adipose cells are 96% triglycerides — the stored energy reserve of approximately 3,500 kcal per pound."},
+  {q:"What is the approximate caloric content of 1 pound of storage fat?",opts:["1,000 kcal","2,000 kcal","3,500 kcal","5,000 kcal"],c:2,fb:"✓ 1 lb storage fat ≈ 3,500 kcal. To lose 1 lb/week → 500 kcal/day deficit. Walking/jogging 1 mile ≈ 100 kcal burned."},
+  {q:"Adipose tissue is ~83% pure fat, ~15% water, ~2% protein. What is the true caloric equivalent of losing 1 lb of actual adipose tissue?",opts:["3,500 kcal — the standard figure applies exactly","~2,995 kcal — because adipose tissue is not 100% pure fat, the real figure is 3,500 × 0.83","~1,750 kcal — fat tissue is only 50% triglycerides","~4,200 kcal — water content increases the caloric density"],c:1,fb:"✓ 2,995 kcal. Adipose tissue = ~83% fat + ~15% water + ~2% protein. 3,500 × 0.83 = ~2,995. The commonly cited 3,500 assumes 100% pure fat — 2,995 is the biologically accurate figure."},
+  {q:"What does 'Energy Stored = Energy Input ± Energy Output' mean for fat loss?",opts:["Only dietary fat intake determines fat storage","Excess kcal from ANY macronutrient (CHO, fat, or protein) is stored as adipose tissue — fat loss requires burning MORE kcal than consumed","Only exercise-derived energy output reduces adipose tissue","Energy output must always equal energy input"],c:1,fb:"✓ Excess kcal from any source (CHO, fat, protein) is stored as fat. Eat 3,000 kcal, burn 2,000 → 1,000 kcal stored. Eat 2,000, burn 3,000 → 1,000 kcal removed from adipose tissue. Fat loss = sustained caloric deficit."},
+  {q:"Why does walking and jogging 1 mile burn approximately the same kcal (~100)?",opts:["Both use identical muscles at identical intensity","Moving your body mass 1 mile requires roughly the same total mechanical work regardless of pace — speed affects time taken, not total kcal per mile","Running burns 3× more kcal per mile than walking","The 100 kcal figure only applies at exactly 70 kg body weight"],c:1,fb:"✓ The total work of displacing your body mass 1 mile is roughly constant regardless of pace. Running gets there faster but burns the same ~100 kcal/mile as walking. To lose 5 lbs through exercise alone = ~175 miles (5 × 3,500 ÷ 100)."},
+  {q:"Does the fuel used during exercise (fat vs. CHO) determine how much fat you ultimately lose?",opts:["Yes — the 'fat burning zone' at low intensity produces more total fat loss","No — total caloric deficit over time determines fat loss. Whether fat or CHO fuels the workout does not significantly change total adipose tissue lost.","Yes — only exercise using fat as fuel directly reduces adipose tissue","Yes — high intensity exercise converts CHO directly into fat stores"],c:1,fb:"✓ Fuel selection does NOT determine fat loss — total caloric deficit does. Low intensity burns a higher % of fat per minute but fewer total kcal. High intensity burns more kcal/min using CHO. Either approach reduces adipose tissue if it creates a deficit."},
+  {q:"What actually happens to fat cells during fat loss?",opts:["They undergo hyperplasia — dividing into smaller daughter cells","They undergo apoptosis — dying and being eliminated permanently","They undergo atrophy — shrinking as stored triglycerides are mobilized out. No evidence of hyperplasia in adults.","They are converted into connective tissue"],c:2,fb:"✓ Fat loss = fat cell ATROPHY (shrinking). Triglycerides are mobilized out of cells which shrink but do NOT disappear. No evidence of fat cell hyperplasia in adults (though hypothesized during infancy, puberty, and pregnancy)."},
+  {q:"Why does rapid weight loss appear greater in the first few weeks of a fat loss program?",opts:["Fat loss rate is genuinely faster early on due to higher metabolic rate","Early weight loss is mostly water from glycogen depletion — not actual adipose tissue atrophy. Glycogen holds ~3g water per gram.","The body preferentially burns fat first before other tissues early on","Early losses reflect mostly muscle loss, not fat loss"],c:1,fb:"✓ Glycogen holds ~3g water per gram. When glycogen stores deplete early in a diet, a large amount of water is lost with it → scale drops fast → creates a false impression of fat loss rate. Actual adipose tissue atrophy is much slower."},
+];
+
+const DECK_SIZE = 12;
 let cur=0, sc=0, ans=false, deck=[];
 
 function shuffle(arr){
@@ -454,11 +495,11 @@ function shuffle(arr){
 }
 
 function buildDeck(){
-  deck = shuffle(qs).map(q => {
-    const paired = q.opts.map((o,i)=>({text:o, correct:i===q.c}));
-    const shuffled = shuffle(paired);
-    const newCorrect = shuffled.findIndex(o=>o.correct);
-    return { q: q.q, opts: shuffled.map(o=>o.text), c: newCorrect, fb: q.fb };
+  const picked = shuffle(BANK).slice(0, DECK_SIZE);
+  deck = picked.map(q => {
+    const paired = q.opts.map((o,i)=>({text:o,correct:i===q.c}));
+    const sh = shuffle(paired);
+    return {q:q.q, opts:sh.map(o=>o.text), c:sh.findIndex(o=>o.correct), fb:q.fb};
   });
 }
 
@@ -496,14 +537,14 @@ function nq(){
   if(cur<deck.length){ rq(); }
   else{
     const pct=Math.round((sc/deck.length)*100);
-    const msg=sc===deck.length?"Perfect score!":sc>=12?"Excellent — nearly there.":sc>=9?"Solid work — review the ones you missed.":"Keep at it — revisit the tabs and try again.";
+    const msg=sc===deck.length?"Perfect score!":sc>=10?"Excellent — nearly there.":sc>=7?"Solid work — review the ones you missed.":"Keep at it — revisit the tabs and try again.";
     document.getElementById('qc').innerHTML=`
       <div class="card" style="text-align:center;padding:2rem">
         <h3 style="margin-bottom:8px">Done!</h3>
         <p style="font-size:22px;font-weight:500;color:#111;margin-bottom:6px">${sc} / ${deck.length}</p>
         <p style="font-size:14px;color:#888;margin-bottom:16px">${pct}% — ${msg}</p>
         <div class="score-bar" style="max-width:200px;margin:0 auto 16px"><div class="score-fill" style="width:${pct}%"></div></div>
-        <button class="qb" style="width:auto;display:inline-block" onclick="restart()">Restart quiz</button>
+        <button class="qb" style="width:auto;display:inline-block" onclick="restart()">New quiz ↻</button>
       </div>`;
   }
 }
